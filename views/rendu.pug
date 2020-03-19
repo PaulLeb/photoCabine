@@ -1,0 +1,15 @@
+extends layout
+
+block content
+
+    img.rendu(src=`/images/${image}.jpeg` , alt="")
+
+    .shoot.instructions
+        p Reprendre
+        a(href="/photo")
+            i.arrow.down
+
+    .print.instructions
+        p Imprimer
+        a(href="/print")
+            i.arrow.right

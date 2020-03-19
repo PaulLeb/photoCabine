@@ -1,0 +1,152 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+
+.mainTitle{
+  width: 518px;
+  margin: 100px auto;
+}
+
+.mainTitle h3{
+  font-family: 'Playball', cursive;
+  margin: 0;
+  position: relative;
+  top: 45px;
+  font-size: 3em;
+}
+
+.mainTitle div{
+  background: black;
+  display: inline-block;
+  transform: rotate(-15deg);
+}
+
+.mainTitle h1{
+  font-family: 'Shrikhand', cursive;
+  color: #fff;
+  margin: 5px 15px;
+  font-size: 8em;
+}
+
+.mainTitle span{
+  font-family: "Poiret One", cursive;
+  position: relative;
+  left: 39px;
+  top: -134px;
+  color: #fff;
+  font-size: 2em;
+}
+
+.mainTitle h2{
+  font-family: 'Oleo Script Swash Caps', cursive;
+  color: seagreen;
+  transform: rotate(-15deg);
+  display: inline-block;
+  position: relative;
+  right: -201px;
+  top: -166px;
+  text-shadow: -1px 1px 0 #fff, 
+                1px 1px 0 #fff, 
+                1px -1px 0 #fff, 
+                -1px -1px 0 #fff; 
+  font-size: 6em;
+}
+
+.ready{
+  left: 32px;
+}
+
+.instructions{
+  width:-moz-fit-content;
+  position: fixed;
+  bottom: 32px;
+}
+
+.instructions p{
+  font-family: 'Playball', cursive;
+  color: black;
+  margin: 0;
+  font-size: 3em;
+}
+
+.instructions .down{
+  margin: 26px auto 0 auto;
+  width: 0;
+  display: block;
+}
+
+.shoot{
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.print{
+  right: 32px;
+}
+
+.print p{
+  padding-right: 40px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.print a{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.arrow{
+  border: solid black;
+  border-width: 0 5px 5px 0;
+  display: inline-block;
+  padding: 5px;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+video {
+  width: auto;
+  height: 100vh;
+  margin: auto;
+  display: block;
+  position: fixed;
+  /* left: 50%;
+  top: 44%;
+  transform: translate(-50%, -50%); */
+}
+
+.can{
+  display: none;
+  width: 1113px;
+  height: auto;
+  margin: auto;
+  display: block;
+  position: fixed;
+  left: 50%;
+  top: 44%;
+  transform: translate(-50%, -50%);
+}
+
+img.rendu{
+  display: block;
+  margin: auto;
+}

@@ -1,0 +1,73 @@
+extends layout
+
+block content
+    video#video(autoplay)
+    canvas#can.can
+    //- img.can.shooted(src="", alt="")
+    .shoot.instructions
+        p Prendre une photo
+        a#shoot(href="")
+            i.arrow.down
+
+
+    script.
+        var video = document.getElementById('video');
+        var shootBtn = document.querySelector("#shoot")
+        var canvas = document.querySelector("#can")
+
+        // Get access to the camera!
+        if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+            // Not adding `{ audio: true }` since we only want video now
+            navigator.mediaDevices.getUserMedia({ video: true }).then(function(stream) {
+                //video.src = window.URL.createObjectURL(stream);
+                video.srcObject = stream;
+                video.play();
+            });
+        }
+
+        shootBtn.addEventListener("click", (e)=> {
+            e.preventDefault()
+            //- console.log("shoot")
+            var ctx = canvas.getContext("2d")
+            canvas.width = video.videoWidth
+            canvas.height = video.videoHeight
+
+            ctx.drawImage(video, 0, 0, video.videoWidth, video.videoHeight)
+
+            var img = canvas.toDataURL("image/jpeg")
+
+            //- console.log(img)
+            canvas.style.display = "block"
+
+            //- var dataClean = img.replace(/^data:image\/\w+;base64,/, "").toString()
+            //- var dataCleanMore = dataClean.replace(/\//g, "*")
+            //- var data = dataCleanMore.replace(/\+/g, "?")
+
+            var hostname = window.location.hostname
+            var protocol = window.location.protocol     
+            var port = window.location.port
+
+            var url = `${protocol}//${hostname}:${port}/shoot`
+
+            const options = {
+                method: 'POST',
+                body: JSON.stringify({"image":img}),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            }
+
+            // send POST request
+            fetch(url, options)
+                .then(res => res.json())
+                .then(function(res){
+                    let nextUrl = `${protocol}//${hostname}:${port}/rendu/${res.filename}`
+                    //- console.log(nextUrl)
+                    window.location.assign(nextUrl)
+                });
+                
+        })
+
+        function shoot(){
+            
+        }
