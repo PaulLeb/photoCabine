@@ -46,10 +46,10 @@ body{
   position: relative;
   right: -201px;
   top: -166px;
-  text-shadow: -1px 1px 0 #fff, 
-                1px 1px 0 #fff, 
-                1px -1px 0 #fff, 
-                -1px -1px 0 #fff; 
+  text-shadow: -1px 1px 0 #fff,
+                1px 1px 0 #fff,
+                1px -1px 0 #fff,
+                -1px -1px 0 #fff;
   font-size: 6em;
 }
 
@@ -60,7 +60,10 @@ body{
 .instructions{
   width:-moz-fit-content;
   position: fixed;
-  bottom: 32px;
+  bottom: 0;
+  padding-bottom: 32px;
+  width: 100vw;
+  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 75%, rgba(0,212,255,0) 100%);
 }
 
 .instructions p{
@@ -68,6 +71,7 @@ body{
   color: black;
   margin: 0;
   font-size: 3em;
+  text-align: center;
 }
 
 .instructions .down{
