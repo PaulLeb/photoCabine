@@ -61,21 +61,21 @@ body{
   width:-moz-fit-content;
   position: fixed;
   bottom: 0;
-  padding-bottom: 32px;
+  padding: 32px 0;
   width: 100vw;
-  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 75%, rgba(0,212,255,0) 100%);
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%);
 }
 
 .instructions p{
   font-family: 'Playball', cursive;
-  color: black;
+  color: #fff;
   margin: 0;
   font-size: 3em;
   text-align: center;
 }
 
 .instructions .down{
-  margin: 26px auto 0 auto;
+  margin: 4px auto 0 auto;
   width: 0;
   display: block;
 }
@@ -101,7 +101,7 @@ body{
 }
 
 .arrow{
-  border: solid black;
+  border: solid #fff;
   border-width: 0 5px 5px 0;
   display: inline-block;
   padding: 5px;
@@ -128,11 +128,11 @@ body{
 }
 
 video {
-  width: auto;
+  /* width: auto; */
   height: 100vh;
   margin: auto;
   display: block;
-  position: fixed;
+  /* position: fixed; */
   /* left: 50%;
   top: 44%;
   transform: translate(-50%, -50%); */
