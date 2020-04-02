@@ -2,6 +2,7 @@ extends layout
 
 block content
     video#video(autoplay)
+    video#video2(autoplay)
     canvas#can.can
     //- img.can.shooted(src="", alt="")
     .shoot.instructions
@@ -12,6 +13,7 @@ block content
 
     script.
         var video = document.getElementById('video');
+        var video2 = document.getElementById('video2');
         var shootBtn = document.querySelector("#shoot")
         var canvas = document.querySelector("#can")
 
@@ -21,7 +23,9 @@ block content
             navigator.mediaDevices.getUserMedia({ video: true }).then(function(stream) {
                 //video.src = window.URL.createObjectURL(stream);
                 video.srcObject = stream;
+                video2.srcObject = stream;
                 video.play();
+                video2.play();
             });
         }
 

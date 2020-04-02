@@ -127,7 +127,7 @@ body{
   -webkit-transform: rotate(45deg);
 }
 
-video {
+#video {
   /* width: auto; */
   height: 100vh;
   margin: auto;
@@ -136,6 +136,16 @@ video {
   /* left: 50%;
   top: 44%;
   transform: translate(-50%, -50%); */
+}
+
+#video2{
+  position: fixed;
+  /* height: 105vh; */
+  width: 105vw;
+  top: -10px;
+  left: -10px;
+  filter: blur(10px);
+  z-index: -1;
 }
 
 .can{
